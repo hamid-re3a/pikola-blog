@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-          
+
       - name: Install PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
@@ -29,7 +29,7 @@ jobs:
       - name: Create ZIP File
         run: |
           mkdir deployment
-          zip -r deployment-blog/deployment.zip . -x "storage/logs/*" -x "vendor/*" -x ".git/*" -x "node_modules/*" -x "User/storage/*"
+          zip -r deployment/deployment.zip . -x "storage/logs/*" -x "vendor/*" -x ".git/*" -x "node_modules/*" -x "User/storage/*"
 
       - name: Upload ZIP File
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
@@ -38,4 +38,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: deployment/
-          server-dir: /deployment/
+          server-dir: /deployment-blog/
