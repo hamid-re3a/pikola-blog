@@ -2,7 +2,7 @@
 @section('content')
     <div class="row">
                     @foreach($posts as $index => $post)
-                        @if($index === 0 && $page== 1)
+                        @if($index === 0 && ($page == 1 || !$page))
                             <div class="col-md-12">
                                 <article class="single-blog">
                                     <div class="post-thumb">
@@ -12,7 +12,7 @@
                                     </div>
                                     <div class="post-content">
                                         <div class="entry-header text-center text-uppercase">
-                                            <a href="#" class="post-cat">Category</a>
+                                            <a href="#" class="post-cat">{{$post->topic->name}}</a>
                                             <h2><a href="{{ url('single-post/' . $post->slug) }}">{{ $post->title }}</a></h2>
                                         </div>
                                         <div class="entry-content">
@@ -51,7 +51,7 @@
                                         <div class="media-body">
                                             <div class="post-content">
                                                 <div class="entry-header text-left text-uppercase">
-                                                    <a href="#" class="post-cat">Category</a>
+                                                    <a href="#" class="post-cat">{{$post->topic->name}}</a>
                                                     <h2><a href="{{ url('single-post/' . $post->slug) }}">{{ $post->title }}</a></h2>
                                                 </div>
                                                 <div class="entry-content">
