@@ -16,10 +16,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20'
-
-      - name: Build assets
-        run: yarn install && npm run prod
-
+          
       - name: Install PHP and Composer
         uses: shivammathur/setup-php@v2
         with:
