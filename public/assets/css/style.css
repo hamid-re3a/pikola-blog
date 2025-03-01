@@ -12,10 +12,15 @@ Version: 2.0
   letter-spacing: 1px;
   margin-bottom: 10px; }
 
+@font-face {
+    font-family: vazir;
+    src: url('./fonts/Vazir.woff') ;
+
+}
 body {
   background: #f4f4f4;
   color: #444;
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", sans-serif,vazir;
   font-size: 15px;
   -webkit-font-smoothing: antialiased;
   -moz-font-smoothing: antialiased; }
