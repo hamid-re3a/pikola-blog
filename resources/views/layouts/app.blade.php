@@ -190,7 +190,7 @@
         <!-- /.container-fluid -->
     </nav>
     <div class="kotha-logo text-center">
-        <h1>Pikola - Party with Pikola</h1>
+        <h1>Party with Pikola</h1>
     </div>
 </header>
 <div class="kotha-default-content">
